@@ -1,19 +1,15 @@
-/* --- Variabel Warna untuk Kesan Alam & Ghibli (Diperbarui) --- */
+/* --- 🎨 PALET WARNA ALAM & GHIBLI --- */
 :root {
-    --color-primary-forest: #38761D; /* Hijau Tua Hutan */
-    --color-secondary-moss: #6AA84F; /* Hijau Lumut Lembut */
-    --color-tertiary-earth: #A68B5E; /* Cokelat Tanah Soft */
-    --color-background-paper: #FFFDF4; /* Putih Gading/Kertas Tua */
-    --color-background-warm: #E6E0D3; /* Krem Lebih Gelap (Tanah Kering) */
-    --color-text-dark: #3A3A3A; /* Abu-abu Hangat */
-    --color-text-accent: #9A5074; /* Ungu/Merah Muda Ghibli Soft */
-    --color-shadow-soft: rgba(0, 0, 0, 0.08); /* Bayangan sangat lembut */
-
-    --font-heading: 'Merriweather', serif;
-    --font-body: 'Quicksand', sans-serif;
+    --color-forest-green: #38761D; /* Hijau Utama (Hutan) */
+    --color-moss-green: #6AA84F; /* Hijau Lumut (Aksen) */
+    --color-earth-brown: #A68B5E; /* Cokelat Tanah */
+    --color-paper-white: #FFFDF4; /* Putih Gading (Kertas Tua) */
+    --color-warm-beige: #E6E0D3; /* Krem Hangat (Latar Belakang) */
+    --color-text-dark: #3A3A3A; /* Teks Hitam Soft */
+    --color-accent-pink: #9A5074; /* Aksen Ghibli (Soft Pink/Purple) */
 }
 
-/* --- Pengaturan Dasar (Diperbarui) --- */
+/* --- 📝 RESET & TYPOGRAPHY --- */
 * {
     margin: 0;
     padding: 0;
@@ -21,175 +17,167 @@
 }
 
 body {
-    font-family: var(--font-body);
+    font-family: 'Quicksand', sans-serif;
     color: var(--color-text-dark);
-    line-height: 1.7; /* Line height ditingkatkan agar mudah dibaca */
-    background-color: var(--color-background-paper); /* Latar belakang kertas/gading */
+    line-height: 1.7; /* Jarak baris yang nyaman (alami) */
+    background-color: var(--color-warm-beige); /* Latar belakang hangat */
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-h1, h2 {
-    font-family: var(--font-heading);
-    color: var(--color-primary-forest);
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    color: var(--color-forest-green);
     margin-bottom: 0.5em;
 }
 
-/* --- 1. Perkenalan (Hero Section) (Diperbarui) --- */
+.section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-heading {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--color-earth-brown);
+}
+
+/* --- 1. PERKENALAN (HERO) --- */
 .hero-section {
-    /* Ganti dengan gambar hutan yang lembut dan memiliki cahaya alami */
-    background: url('./assets/forest.jpg') no-repeat center center/cover; 
-    min-height: 500px; /* Ditingkatkan sedikit */
+    background: url('./assets/forest.jpg') no-repeat center center/cover;
+    min-height: 550px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
-    /* Border dibuat lebih natural */
-    border-bottom: 10px solid var(--color-tertiary-earth);
+    border-bottom: 10px solid var(--color-moss-green); /* Garis batas lumut */
 }
 
 .hero-content {
-    /* Latar belakang yang lebih gading dan transparan */
-    background-color: rgba(255, 255, 255, 0.92); 
-    padding: 30px 40px;
-    border-radius: 20px; /* Sudut lebih membulat */
-    box-shadow: 0 8px 25px var(--color-shadow-soft); /* Bayangan lebih lembut */
-    max-width: 750px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px 50px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
 }
 
 .main-title {
-    font-size: 3em;
-    color: var(--color-primary-forest);
-    text-shadow: 1px 1px 3px rgba(106, 168, 79, 0.4); /* Bayangan teks lembut */
-    margin-bottom: 5px;
+    font-size: 3.2em;
+    color: var(--color-forest-green);
+    text-shadow: 1px 1px 4px rgba(106, 168, 79, 0.3);
 }
 
 .subtitle {
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-style: italic;
-    color: var(--color-tertiary-earth); /* Menggunakan warna bumi */
-    margin-bottom: 25px;
+    color: var(--color-earth-brown);
+    margin-bottom: 30px;
 }
 
-.introduction p {
-    margin: 12px 0;
-    font-size: 1.1em;
+.introduction-box p {
+    margin: 15px 0;
+    font-size: 1.15em;
 }
 
-/* --- 2. Proyek (Ecocycle) (Diperbarui) --- */
+/* --- 2. PROYEK (ECOCYCLE) --- */
 .project-section {
-    padding: 70px 0;
-    text-align: center;
-    background-color: var(--color-background-warm); /* Warna latar yang hangat */
-    position: relative;
-    border-bottom: 1px solid var(--color-tertiary-earth);
-}
-
-.project-section h2 {
-    font-size: 2.2em;
-    margin-bottom: 40px;
-    color: var(--color-tertiary-earth);
+    background-color: var(--color-warm-beige);
+    border-bottom: 1px solid var(--color-earth-brown);
 }
 
 .project-card {
-    background: var(--color-background-paper);
+    background: var(--color-paper-white);
     border-radius: 15px;
     padding: 40px;
-    /* Border dengan style Ghibli */
-    border: 3px dashed var(--color-secondary-moss); 
-    max-width: 650px;
+    border: 3px dashed var(--color-moss-green); /* Border putus-putus alami */
+    max-width: 700px;
     margin: 0 auto 30px;
-    transition: all 0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .project-card:hover {
-    transform: scale(1.03); /* Sedikit membesar saat di-hover */
-    background-color: #F0F6E6; /* Sedikit sentuhan hijau saat di-hover */
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(56, 118, 29, 0.2); /* Bayangan hijau saat hover */
 }
 
-.project-desc {
-    font-size: 1.15em;
-    margin-bottom: 25px;
-}
-
-.project-link {
+.cta-button {
     display: inline-block;
     padding: 12px 30px;
-    background-color: var(--color-primary-forest);
-    color: white;
+    background-color: var(--color-forest-green);
+    color: var(--color-paper-white);
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 50px; /* Bentuk pil organik */
     font-weight: bold;
     letter-spacing: 1px;
-    transition: background-color 0.3s, transform 0.2s;
-    /* Efek tombol 3D lembut */
-    box-shadow: 0 4px 0 var(--color-secondary-moss); 
+    transition: background-color 0.3s, box-shadow 0.2s;
+    box-shadow: 0 4px 0 var(--color-moss-green); /* Efek tombol 3D lembut */
 }
 
-.project-link:hover {
-    background-color: #559933; 
+.cta-button:hover {
+    background-color: #559933;
     transform: translateY(2px);
-    box-shadow: 0 2px 0 var(--color-secondary-moss); 
+    box-shadow: 0 2px 0 var(--color-moss-green);
 }
 
-.call-to-action {
+.closing-note {
     font-style: italic;
-    color: var(--color-text-accent);
+    color: var(--color-accent-pink);
     margin-top: 25px;
-    font-size: 1.3em;
+    font-size: 1.2em;
+    text-align: center;
 }
 
-/* --- 3. Pesan Laudato'si (Ghibli Style) (Diperbarui) --- */
+/* --- 3. PESAN LAUDATO'SI (GHIBLI) --- */
 .laudato-si-section {
-    padding: 100px 0;
-    background-color: var(--color-background-paper);
-    position: relative;
-    overflow: hidden; 
+    background-color: var(--color-paper-white);
 }
 
-.ghibli-frame {
-    background-color: rgba(255, 255, 255, 0.8); 
-    /* Border dibuat dari efek bayangan untuk kesan "kertas usang" */
-    border: none; 
-    border-radius: 10px;
-    padding: 50px;
-    max-width: 900px;
-    margin: 0 auto;
-    /* Efek kertas yang menumpuk */
-    box-shadow: 0 0 0 10px var(--color-background-warm), 0 15px 40px var(--color-shadow-soft);
+.ghibli-paper {
     position: relative;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 60px;
+    /* Efek Kertas Ghibli: Border tebal dan bayangan berlapis */
+    box-shadow: 0 0 0 10px var(--color-warm-beige), 0 15px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: #FAFAFA; /* Sedikit off-white */
     z-index: 10;
 }
 
-.section-title-ghibli {
-    font-size: 2.8em;
-    color: var(--color-text-accent); 
-    text-align: center;
+.laudato-si-heading {
+    color: var(--color-accent-pink);
+    border-bottom: 3px dotted var(--color-moss-green); /* Garis bawah putus-putus alami */
+    padding-bottom: 15px;
     margin-bottom: 40px;
-    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.9); /* Bayangan teks lebih terang */
-    border-bottom: 2px solid var(--color-secondary-moss);
-    padding-bottom: 10px;
+    font-size: 2.5em;
 }
 
-.laudato-si-content p {
-    margin-bottom: 20px;
+.dove-icon {
+    font-size: 1.2em;
+    margin-right: 15px;
+}
+
+.laudato-si-text p {
+    margin-bottom: 25px;
     text-align: justify;
     font-size: 1.1em;
 }
 
-.ghibli-note {
+.discernment-quote {
     background-color: #F0F6E6; /* Hijau sangat muda */
-    border-left: 6px solid var(--color-secondary-moss);
-    padding: 20px;
+    border-left: 6px solid var(--color-moss-green);
+    padding: 25px;
     margin: 30px 0;
     font-style: italic;
-    border-radius: 5px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05); /* Bayangan dalam lembut */
+    border-radius: 8px;
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.05);
 }
 
 .closing-reflection {
@@ -197,49 +185,29 @@ h1, h2 {
     text-align: center;
     margin-top: 50px;
     font-size: 1.3em;
-    color: var(--color-primary-forest);
-    padding: 15px;
-    border: 1px dotted var(--color-tertiary-earth);
+    color: var(--color-forest-green);
 }
 
-/* --- Dekorasi Alam (Ghibli Style) (Diperbarui) --- */
-/* Pastikan Anda menggunakan gambar PNG transparan untuk dekorasi ini */
-.nature-element {
+/* --- DEKORASI ALAM (DECO) --- */
+.nature-deco {
     position: absolute;
-    opacity: 0.7; /* Sedikit transparan agar menyatu dengan latar */
+    width: 120px;
+    opacity: 0.6;
     z-index: 5;
-    transition: transform 0.5s ease-in-out;
 }
 
-.squirrel-deco {
-    width: 100px; /* Ukuran sedikit diperbesar */
-    height: auto;
-    bottom: 30px;
-    right: 30px;
+.deer-right {
+    bottom: -30px; /* Sedikit keluar dari bingkai */
+    right: -20px;
     transform: rotate(-5deg);
 }
 
-.squirrel-deco:hover {
-    transform: scale(1.1) rotate(5deg); /* Efek saat di-hover */
-}
-
-/* Tambahan dekorasi daun di sudut atas */
-/* Anda perlu menambahkan elemen <img> di HTML Anda dan menyiapkan file './assets/leaf.png' */
-/* .leaf-top-left {
-    top: -50px;
-    left: -50px;
-    width: 150px;
-    opacity: 0.5;
-    transform: rotate(15deg);
-} */
-
-
-/* --- Footer (Diperbarui) --- */
+/* --- FOOTER --- */
 footer {
     text-align: center;
     padding: 25px;
-    background-color: var(--color-primary-forest);
-    color: var(--color-background-paper); /* Warna teks gading */
+    background-color: var(--color-forest-green);
+    color: var(--color-paper-white);
     font-size: 1em;
-    border-top: 5px solid var(--color-secondary-moss);
+    border-top: 5px solid var(--color-moss-green);
 }
